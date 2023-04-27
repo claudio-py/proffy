@@ -93,7 +93,7 @@
 	display: block;
 }
 
-.teacher-item footer button {
+.teacher-item footer .button {
 	width: 20rem;
 	height: 5.6rem;
 	background: var(--color-secondary);
@@ -111,7 +111,7 @@
 }
 
 
-.teacher-item footer button:hover {
+.teacher-item footer .button:hover {
 
 	background: var(--color-secondary-dark);
 }
@@ -168,14 +168,17 @@ margin: 0 auto;
 	display: initial;
 	margin-left: 16px;
  }
- .teacher-item footer button{
+ .teacher-item footer .button{
 width: 245px;
 font-size: 16px;
 justify-content: center;
 	
  }
- .teacher-item button img{
+ .teacher-item .button img{
 	margin-right: 16px;
+ 
+ border:2px solid white;
+border-radius: 50% 50% 50% 20%; 
  }
 }
 
