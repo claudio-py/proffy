@@ -1,11 +1,14 @@
 {
   "name": "nlw02",
   "scripts": {
-    "start": "nodemon src/server.js"
+    "start": "nodemon src/server.js",
+    "db": "node src/database/db.js"
   },
   "dependencies": {
     "express": "^4.18.2",
-    "nunjucks": "^3.2.4"
+    "nunjucks": "^3.2.4",
+    "sqlite": "^4.1.2",
+    "sqlite-async": "^1.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
