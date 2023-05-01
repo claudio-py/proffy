@@ -1,6 +1,6 @@
 module.exports = async function (
 	db,
-	{ proffyValue, classValue, classScheduleValue }
+	{ proffyValue, classValue, classScheduleValues }
 ) {
 	//inserir dados na tabela
 	const insertedProffy = await db.run(`
@@ -10,10 +10,10 @@ avatar,
 whatsapp,
 bio
 ) VALUES(
-${proffyValue.name},
-${proffyValue.avatar},
-${proffyValue.whatsapp},
-${proffyValue.bio}
+"${proffyValue.name}",
+"${proffyValue.avatar}",
+"${proffyValue.whatsapp}",
+"${proffyValue.bio}"
 );
 `)
 	const proffy_id = insertedProffy.lastID
@@ -24,9 +24,9 @@ subject,
 cost,
 proffy_id
 )VALUES(
-${classValue.subject},
-${classValue.cost},
-${proffy_id}
+"${classValue.subject}",
+"${classValue.cost}",
+"${proffy_id}"
 );
 `)
 	const class_id = insertedClass.lastID
@@ -40,10 +40,10 @@ ${proffy_id}
     time_from,
     time_to
   ) VALUES(
-${class_id},
-${classScheduleValue.weekday},
-${classScheduleValue.time_from},
-${classScheduleValue.time_to},
+"${class_id}",
+"${classScheduleValue.weekday}",
+"${classScheduleValue.time_from}",
+"${classScheduleValue.time_to}"
   );
   `)
 		}
