@@ -58,6 +58,9 @@
 			</header>
 
 			<main>
+{%if proffys == ""%}
+<p class="no-results">Infelizmente nenhum Proffy foi encontrado nesta sessão</p>
+{%else%}
 				{% for proffy in proffys %}
 				<article class="teacher-item">
 					<header>
@@ -78,7 +81,7 @@
 					</footer>
 				</article>
 				{%endfor%}
-			
+			{%endif%}
 			</main>
 		</div>
 	</body>

@@ -39,7 +39,7 @@ JOIN classes ON (classes.proffy_id = proffys.id)
 WHERE classes.proffy_id = 1;
 `)
 	// console.log(selectClassesAndProffys)
-  const slectClassesSchedules = await db.all(`
+	const slectClassesSchedules = await db.all(`
   SELECT class_schedule.*
   FROM class_schedule
   WHERE class_schedule.class_id = "1"
@@ -48,5 +48,5 @@ WHERE classes.proffy_id = 1;
   AND class_schedule.time_to > "1300"
 
   `)
-  console.log(slectClassesSchedules)
+	console.log(slectClassesSchedules)
 })
